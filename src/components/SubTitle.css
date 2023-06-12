@@ -1,0 +1,9 @@
+.empty-list {
+  width: fit-content;
+  height: fit-content;
+}
+.sub-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
