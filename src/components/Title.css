@@ -1,4 +1,13 @@
-
+form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;;
+}
+.new-item-control{
+    display: flex;
+    flex-direction: column;
+}
 
 .title {
   display: flex;

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./Title.css";
-import Card from "./UI/Card";
 const Title = () => {
   const [isNewItemFormVisible, setIsNewItemFormVisible] = useState(false);
 
@@ -17,13 +16,13 @@ const Title = () => {
         //TODO make/style form, make submit button be added
         // list dynamically
         <form>
-          <div className="form-controls">
-            <Card>
-              <p>Name</p>
-            </Card>
-            <Card>
-              <p>Amount</p>
-            </Card>
+          <div className="new-item-control">
+            <label>Food Item</label>
+            <input type="text" />
+          </div>
+          <div className="new-item-control">
+            <label>Amount</label>
+            <input type="number" min="1" step="1" />
           </div>
         </form>
       )}
