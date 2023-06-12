@@ -1,10 +1,10 @@
 const AmountCounter = () => {
   return (
-    <div class = "counter">
+    <div className = "counter">
       <h2>1</h2>
-      <div class="button-container">
-        <button class="plus-button">+</button>
-        <button class="minus-button">-</button>
+      <div className="button-container">
+        <button className="plus-button">+</button>
+        <button className="minus-button">-</button>
       </div>
     </div>
   );
