@@ -17,6 +17,7 @@ const Title = (props) => {
   const submitHandler = (event) => {
     event.preventDefault();
     const newItemData = {
+      id: `e${Math.random()}`,
       food: enteredFoodItem,
       amount: Number(enteredAmount)
     };

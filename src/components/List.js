@@ -1,4 +1,3 @@
-import "./List.css";
 import Card from "./UI/Card";
 import SubTitle from "./SubTitle";
 import Items from "./Items/Items";
@@ -7,14 +6,9 @@ const List = (props) => {
     <Card>
       <SubTitle />
       <div className="items">
-        <Items
-          name={props.itemList[0].food}
-          amount={props.itemList[0].amount}
-        />
-        <Items
-          name={props.itemList[1].food}
-          amount={props.itemList[1].amount}
-        />
+        {props.itemList.map((item) => (
+          <Items key= {item.id} name={item.food} amount={item.amount} />
+        ))}
       </div>
     </Card>
   );
