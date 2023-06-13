@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Title.css";
-const Title = () => {
+const Title = (props) => {
   const [isNewItemFormVisible, setIsNewItemFormVisible] = useState(false);
   const [enteredFoodItem, setEnteredFoodItem] = useState("");
   const [enteredAmount, setEnteredAmount] = useState("");
@@ -16,8 +16,11 @@ const Title = () => {
   };
   const submitHandler = (event) => {
     event.preventDefault();
-    console.log(enteredFoodItem);
-    console.log(enteredAmount);
+    const newItemData = {
+      food: enteredFoodItem,
+      amount: Number(enteredAmount)
+    };
+    props.onNewItemAdded(newItemData);
     setEnteredFoodItem("");
     setEnteredAmount("");
   };

@@ -7,9 +7,15 @@ const App = () => {
     { food: "banana", amount: 2 },
     { food: "apple", amount: 4 },
   ];
+
+  const saveNewItemHandler = (enteredItem) => {
+    items.push(enteredItem);
+    console.log(items);
+
+  };
   return (
     <div>
-      <Title />
+      <Title onNewItemAdded={saveNewItemHandler} />
       <List itemList={items} />
     </div>
   );
