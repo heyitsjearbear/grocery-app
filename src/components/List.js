@@ -1,13 +1,13 @@
 import Card from "./UI/Card";
-import SubTitle from "./SubTitle";
 import Items from "./Items/Items";
+import FilterHeading from "./FilterHeading";
 const List = (props) => {
   return (
     <Card>
-      <SubTitle />
+      <FilterHeading />
       <div className="items">
         {props.itemList.map((item) => (
-          <Items key= {item.id} name={item.food} amount={item.amount} />
+          <Items key= {item.id} name={item.food} type = {item.type} amount={item.amount} />
         ))}
       </div>
     </Card>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "./Title.css";
-const Title = (props) => {
+import "./NewItemPanel.css";
+const NewItemPanel = (props) => {
   const [isNewItemFormVisible, setIsNewItemFormVisible] = useState(false);
   const [enteredFoodItem, setEnteredFoodItem] = useState("");
   const [enteredAmount, setEnteredAmount] = useState("");
@@ -32,8 +32,6 @@ const Title = (props) => {
         <button onClick={toggleNewItemForm}>Add</button>
       </div>
       {isNewItemFormVisible && (
-        //TODO make submit button be added
-        // list dynamically
         <form onSubmit={submitHandler}>
           <div className="new-item-control">
             <label>Food Item</label>
@@ -53,6 +51,9 @@ const Title = (props) => {
               onChange={amountChangeHandler}
             />
           </div>
+          {
+            //TODO add dropdown for item type
+          }
           <button type="submit">Submit</button>
         </form>
       )}
@@ -60,4 +61,4 @@ const Title = (props) => {
   );
 };
 
-export default Title;
+export default NewItemPanel;

@@ -6,7 +6,7 @@ const Items = (props) => {
   return (
     <Card className="item-card">
       <div>Picture here</div>
-      <p>{props.name}</p>
+      <p>{props.name} ({props.type})</p>
       <AmountCounter amount={props.amount} />
     </Card>
   );
