@@ -17,6 +17,7 @@ const NewItemPanel = (props) => {
   };
   const typeChangeHandler = (event) => {
     setEnteredType(event.target.value);
+    console.log(event.target.value);
   };
   const submitHandler = (event) => {
     event.preventDefault();
@@ -29,7 +30,7 @@ const NewItemPanel = (props) => {
     props.onNewItemAdded(newItemData);
     setEnteredFoodItem("");
     setEnteredAmount("");
-    setEnteredType("");
+    setEnteredType("fruit");
   };
   return (
     <div>
@@ -70,7 +71,7 @@ const NewItemPanel = (props) => {
           }
           <button type="submit">Submit</button>
         </form>
-      )}
+      )};
     </div>
   );
 };
