@@ -6,6 +6,7 @@ const FilterHeading = () => {
       <p>Items(x)</p>
       {
         //TODO add filter button here to filter types of food
+        <button>Filter</button>
       }
       <Card className = "empty-list">Empty List</Card>
     </div>

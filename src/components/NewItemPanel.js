@@ -4,6 +4,7 @@ const NewItemPanel = (props) => {
   const [isNewItemFormVisible, setIsNewItemFormVisible] = useState(false);
   const [enteredFoodItem, setEnteredFoodItem] = useState("");
   const [enteredAmount, setEnteredAmount] = useState("");
+  const [enteredType, setEnteredType] = useState("");
   const toggleNewItemForm = () => {
     setIsNewItemFormVisible(!isNewItemFormVisible);
   };
@@ -14,16 +15,21 @@ const NewItemPanel = (props) => {
   const amountChangeHandler = (event) => {
     setEnteredAmount(event.target.value);
   };
+  const typeChangeHandler = (event) => {
+    setEnteredType(event.target.value);
+  };
   const submitHandler = (event) => {
     event.preventDefault();
     const newItemData = {
       id: `e${Math.random()}`,
       food: enteredFoodItem,
-      amount: Number(enteredAmount)
+      amount: Number(enteredAmount),
+      type:enteredType
     };
     props.onNewItemAdded(newItemData);
     setEnteredFoodItem("");
     setEnteredAmount("");
+    setEnteredType("");
   };
   return (
     <div>
@@ -42,6 +48,15 @@ const NewItemPanel = (props) => {
             />
           </div>
           <div className="new-item-control">
+            <label>Type</label>
+            <select onChange={typeChangeHandler}>
+              <option value = "fruit">fruit</option>
+              <option value = "veggie">veggie</option>
+              <option value = "protein">protein</option>
+              <option value = "carb">carb</option>
+            </select>
+          </div>
+          <div className="new-item-control">
             <label>Amount</label>
             <input
               value={enteredAmount}
@@ -52,7 +67,6 @@ const NewItemPanel = (props) => {
             />
           </div>
           {
-            //TODO add dropdown for item type
           }
           <button type="submit">Submit</button>
         </form>
