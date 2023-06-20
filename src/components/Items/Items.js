@@ -6,7 +6,9 @@ const Items = (props) => {
   return (
     <Card className="item-card">
       <div>Picture here</div>
-      <p>{props.name} ({props.type})</p>
+      <p>
+        {props.name} ({props.type})
+      </p>
       {
         //TODO make buttons for editing amount number
         //functionable
