@@ -9,10 +9,6 @@ const Items = (props) => {
       <p>
         {props.name} ({props.type})
       </p>
-      {
-        //TODO make buttons for editing amount number
-        //functionable
-      }
       <AmountCounter amount={props.amount} />
     </Card>
   );

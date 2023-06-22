@@ -71,7 +71,7 @@ const NewItemPanel = (props) => {
           }
           <button type="submit">Submit</button>
         </form>
-      )};
+      )}
     </div>
   );
 };
