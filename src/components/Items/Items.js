@@ -2,6 +2,7 @@ import "./Items.css";
 import "./AmountCounter.css";
 import Card from "../UI/Card";
 import AmountCounter from "./AmountCounter";
+import React from "react";
 const Items = (props) => {
   return (
     <Card className="item-card">
