@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./FilterHeading.css";
 import "./NewItemPanel.css";
-import Card from "./UI/Card";
 const FilterHeading = (props) => {
   const [isNewItemFormVisible, setIsNewItemFormVisible] = useState(false);
   const toggleNewItemForm = () => {
@@ -25,7 +24,7 @@ const FilterHeading = (props) => {
           </select>
         </div>
       )}
-      <Card className="empty-list">Empty List</Card>
+      <button className="empty-list">Empty List</button>
     </div>
   );
 };
